@@ -20,7 +20,7 @@
 /* ////////////////////////// */
 
 .container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -117,28 +117,28 @@ h1 {
 /* HEADER */
 
 header {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
     padding: 10px 0;
     background: rgba(202, 202, 202, 0.70);
     position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(5px);
     z-index: 1000;
-}
-
-header > div {
-
-    text-decoration: none;
-    gap: 20px;
 }
 
 .logo {
     width: 100px;
+    display: block; /* Assurez-vous que le logo est un bloc */
+    margin: 0 auto; /* Supprime les marges latérales */
 }
 
 ul > li > a {
-    padding: 0 20px;
+    margin: 0 20px;
+    font-size: 1.25rem;
 }
 
 /* SECTION HERO */
@@ -163,25 +163,36 @@ ul > li > a {
 }
 
 .divHero > p {
-    font-size: 25px;
+    font-size: 2.2rem;
+}
+
+.divHero > h1 {
+    font-size: 4.1rem;
+    font-weight: 400;
 }
 
 /* SECTION SERVICES */
 
 .sectionServices {
     position: relative;
-    top: -65px;
+    top: -85px;
 }
 
 .violetCard {
-    background-color: #4D3E9AB7;
-    backdrop-filter: blur(4px);
+    background-color: #44368770;
+    backdrop-filter: blur(13px);
+    box-shadow: 0 4px 4px 0 #9B9B9B40;
     display: block;
     width: 23%;
     padding: 40px 0;
     text-align: center;
     color: white;
     border-radius: 25px;
+    font-size: 1.6rem;
+}
+
+.violetCard span {
+    font-size: 3rem;
 }
 
 /* SECTION HISTORY */
@@ -192,6 +203,17 @@ ul > li > a {
 
 .sectionHistory h2 {
     color: #4D3E9A;
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+
+.divHistory2 p {
+    font-size: 0.95rem;
+}
+
+.divHistory1 p,
+.divHistory3 p {
+font-size: 1.25rem;
 }
 
 .sectionHistory img {
@@ -200,6 +222,7 @@ ul > li > a {
 }
 
 aside {
+    margin-left: 15px;
     top: 100px;
     left: 0;
     position: sticky;
@@ -212,6 +235,7 @@ aside {
 
 aside h3 {
     margin-bottom: 10px;
+    font-size: 1.6rem;
 }
 
 aside li {
@@ -220,19 +244,17 @@ aside li {
 
 aside a {
     color: black;
+    font-size: 1.125rem;
 }
 
 .historyImg {
     display: block;
 }
 
-.divHistoryImg {
-    margin-top: 50px;
-}
-
 .divHistoryImg > div {
     width: 49%;
     position: relative;
+    margin-bottom: 15px;
 }
 
 .divHistory1 {
