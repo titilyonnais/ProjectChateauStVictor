@@ -117,28 +117,34 @@ h1 {
 /* HEADER */
 
 header {
-    display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    padding: 10px 0;
-    background: rgba(202, 202, 202, 0.70);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    background: rgba(202, 202, 202, 0.70);
+    padding: 10px 0;
+    gap: 50px;
     backdrop-filter: blur(4px);
     z-index: 1000;
 }
 
-.logo {
-    width: 100px;
-    display: block; /* Assurez-vous que le logo est un bloc */
-    margin: 0 auto; /* Supprime les marges latérales */
+.side-links a {
+    color: #000;
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
-ul > li > a {
-    margin: 0 20px;
-    font-size: 1.25rem;
+.side-links a:hover {
+    color: #4D3E9A;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.side-links {
+    display: flex;
+    gap: 50px;
 }
 
 /* SECTION HERO */
@@ -179,9 +185,9 @@ ul > li > a {
 }
 
 .violetCard {
-    background-color: #44368770;
-    backdrop-filter: blur(13px);
-    box-shadow: 0 4px 4px 0 #9B9B9B40;
+    background-color: rgba(68, 54, 135, 0.44);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 4px 0 rgba(155, 155, 155, 0.25);
     display: block;
     width: 23%;
     padding: 40px 0;
@@ -189,6 +195,11 @@ ul > li > a {
     color: white;
     border-radius: 25px;
     font-size: 1.6rem;
+    transition: transform 0.2s ease;
+}
+
+.violetCard:hover {
+    transform: scale(1.05);
 }
 
 .violetCard span {
@@ -227,10 +238,12 @@ aside {
     left: 0;
     position: sticky;
     width: 30%;
-    height: 360px;
+    height: 30vh;
+    min-height: 320px;
     padding: 50px 20px 50px 50px;
     box-shadow: 0 0 4px 0 #44368770;
     border-radius: 15px 0 0 15px;
+    display: block;
 }
 
 aside h3 {
